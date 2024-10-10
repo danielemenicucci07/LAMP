@@ -1,36 +1,30 @@
-<?php
+<!DOCTYPE html>
+<html lang >
+<head>
+<title>Esercizio B</title>
+</head>
+<body>
+    <?php
+        $name = "Paolo";
 
-define('TEST_CONSTANT', 123);
-$aFloat = 1.23;
-$anInt = 123;
-$aString = '123';
-$anEmptyString = '';
-$aVeryLongString = str_repeat('lol', 1000);
-$aBoolean = true;
-$nullValue = null;
-$variableThatsNotSet;
-$miavar; $_ENV; $var34;
+       
+        $today = new DateTime("now", new DateTimeZone('Europe/Rome'));
+        $hour = $today->format('H');
 
-echo "<h1>Helloooo! Prove con variabili e costanti</h1><br>";
-echo "define('TEST_CONSTANT', 123) -> " . TEST_CONSTANT . "<br><br>";
-$anInt += TEST_CONSTANT;
-echo "\$anInt += TEST_CONSTANT -> $anInt<br><br>";
+       
+        if ($hour >= 8 && $hour < 12) 
+        {
+            $greeting = "Buongiorno";
+        } elseif ($hour >= 12 && $hour < 20)
+        {
+            $greeting = "Buonasera";
+        } else {
+            $greeting = "Buonanotte";
+        }
 
-echo "\$aFloat + \$anInt -> ";
-echo $aFloat + $anInt;
-echo "<br><br>";
-echo "\$aFloat . \$anInt = " . $aFloat . $anInt . "<br><br>";
+        $browser = $_SERVER['HTTP_USER_AGENT'];
 
-echo "<br>"; $a="10"; $b=20; echo $a . $b;
-echo "<br>"; $c="Ciao"; $d=20; echo $c . $d;
-echo "<br>";
-echo "<br>";
-echo "<br>";
-echo "<br>";
-$nome="Mario";
-$cogn="Rossi";
-echo "Cioa $nome       $cogn";
-echo "<br>";
-echo 'Cioa $nome       $cogn';
-
-exit;
+        
+        echo "$greeting $name, benvenuto nella mia prima pagina PHP!<br>";
+        echo "Stai usando il browser: $browser";
+    ?>
