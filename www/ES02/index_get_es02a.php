@@ -7,7 +7,8 @@
     <h1>Accesso a pagina riservata</h1>
     <p>Accesso consentito solo agli utenti registrati</p>
 
-    <form action="es02a2.php" method="post">
+    <form action="es02a2.php" method="post"> 
+
 
         <label for="username">Username:</label>
         <input type="text" name="username" id="username">
