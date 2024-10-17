@@ -3,7 +3,7 @@
 if ($_SERVER['REQUEST_METHOD'] == 'POST') 
 {
 
-    if (isset($_POST['numero'])) 
+    if (isset($_POST['numero'])) //isset determina se una variabile è dichiarata ed è diversa da null
     {
         $numero = $_POST['numero'];
 

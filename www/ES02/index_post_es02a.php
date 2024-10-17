@@ -4,7 +4,7 @@ $password_corretta = "Forzainter";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") 
 {
-    if (isset($_POST["username"]) && isset($_POST["password"])) 
+    if (isset($_POST["username"]) && isset($_POST["password"]))  //isset determina se una variabile è dichiarata ed è diversa da null
     {
         $username_inserito = $_POST["username"];
         $password_inserita = $_POST["password"];
