@@ -4,14 +4,14 @@ $password_corretta = "Forzainter";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") 
 {
-    if (isset($_POST["username"]) && isset($_POST["password"]))  //isset determina se una variabile è dichiarata ed è diversa da null
+    if (isset($_POST["username"]) || isset($_POST["password"]))  //isset determina se una variabile è dichiarata ed è diversa da null
     {
-        $username_inserito = $_POST["username"];
-        $password_inserita = $_POST["password"];
+        $username_messo = $_POST["username"];
+        $password_messa = $_POST["password"];
 
-        if ($username_inserito == $username_corretta && $password_inserita == $password_corretta) 
+        if ($username_messo == $username_esatto && $password_messa == $password_esatta) 
         {
-           echo "<h2>Accesso riuscito! Benvenuto, $username_inserito! </h2>";
+           echo "<h2>Accesso riuscito! Benvenuto, $username_messo! </h2>";
         } else {
             echo "<h2>Username o password errati! Riprova.</h2>";
             //dati errati rivisualizzare il form
