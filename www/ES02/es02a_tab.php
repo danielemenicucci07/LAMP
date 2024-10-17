@@ -16,11 +16,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
                     <th>Cubo</th>
                 </tr>";
 
-        for ($i = 1; $i <= $numero; $i++) 
+        for ($i = 1; $i <= $numero; $i++) //fino a quando è minore del numero selezionato calcolo quadrato($i * $i) e cubo($i * $i * $i)
         {
             echo "<tr>
                     <td>$i</td>
-                    <td>" . ($i * $i) . "</td>
+                    <td>" . ($i * $i) . "</td> 
                     <td>" . ($i * $i * $i) . "</td>
                   </tr>";
         }
@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 }
 
 
-function visualForm() 
+function visualForm() // creo una tendina
 {
     echo '
     <h2>Tabella dei Quadrati e dei Cubi</h2>
