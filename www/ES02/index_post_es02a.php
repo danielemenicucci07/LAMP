@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
         $username_messo = $_POST["username"];
         $password_messa = $_POST["password"];
 
-        if ($username_messo == $username_esatto && $password_messa == $password_esatta) 
+        if ($username_messo == $username_corretta && $password_messa == $password_corretta) 
         {
            echo "<h2>Accesso riuscito! Benvenuto, $username_messo! </h2>";
         } else {
