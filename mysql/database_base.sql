@@ -76,3 +76,22 @@ VALUES
 SELECT * FROM valutazioni;
 
 
+SELECT s.cognome, v.voto 
+FROM studenti s, valutazioni v
+WHERE s.matricola = v.FK_studenti;
+
+SELECT max(voto), min(voto), avg(voto);
+FROM valutazioni v, studenti s
+WHERE s.matricola = v.FK_studenti
+AND s.cognome = 'santoro'
+
+SELECT count(*) FROM studenti
+
+SELECT count(voto) FROM valutazioni
+
+
+
+
+
+
+
