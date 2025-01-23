@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS disciplina (
 );
 
 -- Inserire alcuni dati nella tabella delle discipline
-INSERT INTO disciplina(codice, nome_disciplina)
+INSERT INTO disciplina(codice_disciplina, nome_disciplina)
 VALUES
     ('arte'),
     ('matematica'),
@@ -109,6 +109,8 @@ SELECT s.cognome
 FROM Studenti s
 LEFT JOIN Voti v ON s.matricola = v.matricola
 WHERE v.matricola IS NULL;
+
+
 
 
 
