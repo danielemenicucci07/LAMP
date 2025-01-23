@@ -90,6 +90,25 @@ SELECT count(*) FROM studenti
 SELECT count(voto) FROM valutazioni
 
 
+SELECT s.cognome, v.disciplina, v.voto, YEAR(CURDATE()) - YEAR(s.data_nascita) AS eta --La funzione curdate è utilizzata per ottenere la data corrente nel formato YYYY-MM-DD. 
+FROM  Studenti s
+JOIN  Voti v ON s.matricola = v.matricola
+WHERE s.cognome LIKE 'S%';  
+
+
+SELECT s.cognome, COUNT(v.voto) AS numero_voti, AVG(v.voto) AS media_voti, MAX(v.voto) AS voto_piu_alto, MIN(v.voto) AS voto_piu_basso
+FROM Studenti s
+JOIN Voti v ON s.matricola = v.matricola
+WHERE s.matricola = '1' 
+
+SELECT COUNT(*) AS studenti_over_18
+FROM Studenti
+WHERE YEAR(CURDATE()) - YEAR(data_nascita) > 18;
+
+SELECT s.cognome
+FROM Studenti s
+LEFT JOIN Voti v ON s.matricola = v.matricola
+WHERE v.matricola IS NULL;
 
 
 
