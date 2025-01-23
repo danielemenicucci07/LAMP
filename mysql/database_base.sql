@@ -36,6 +36,7 @@ SELECT * FROM disciplina;
 -- Creare la tabella degli studenti
 CREATE TABLE IF NOT EXISTS studenti (
     matricola INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(20) NOT NULL,
     cognome VARCHAR(30) NOT NULL,
     data_nascita DATE,
     FK_corso FOREIGN KEY
@@ -45,11 +46,11 @@ CREATE TABLE IF NOT EXISTS studenti (
 
 
 -- Inserire alcuni dati nella tabella degli studenti
-INSERT INTO studenti(matricola, cognome, data_nascita, capo_g)
+INSERT INTO studenti(matricola, nome, cognome, data_nascita, capo_g)
 VALUES
-    ('rossi',15-03-2004,03),
-    ('menicucci',09-02-2007,02),
-    ('santoro',26-02-2007,01);
+    ('Manuel','Rossi',15-03-2004,03),
+    ('Daniele' 'Menicucci',09-02-2007,02),
+    ('Alessandro' 'Santoro',26-02-2007,01);
 
 SELECT * FROM studenti;
 
@@ -111,8 +112,30 @@ LEFT JOIN Voti v ON s.matricola = v.matricola
 WHERE v.matricola IS NULL;
 
 
+SELECT cognome, data_nascita
+FROM studenti;
+
+SELECT nome
+FROM Studenti
+WHERE cognome = 'Rossi';
+
+SELECT YEAR(CURDATE()) - YEAR(data_nascita) AS età
+FROM Studenti
+WHERE matricola = '1';
+--YEAR(CURDATE()) - YEAR(data_nascita) Questa operazione calcola la differenza tra l'anno corrente e l'anno di nascita. 
 
 
+SELECT cognome
+FROM studenti
+WHERE s.cognome LIKE 'M%';  
 
+SELECT s.cognome, COUNT(v.voto) AS numero_voti
+FROM studenti s
+JOIN Voti v ON s.matricola = v.matricola
+WHERE s.matricola = '1' 
 
+SELECT s.cognome, COUNT(v.voto) AS numero_voti
+FROM studenti s 
+JOIN Voti v ON s.matricola = v.matricola
+WHERE cognome = 'Rossi';
 
