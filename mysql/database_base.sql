@@ -39,8 +39,8 @@ CREATE TABLE IF NOT EXISTS studenti (
     nome VARCHAR(20) NOT NULL,
     cognome VARCHAR(30) NOT NULL,
     data_nascita DATE,
-    FK_corso FOREIGN KEY
-    capo_g INT
+    FK_corso INT,
+    capo_g INT,
     FOREIGN KEY(FK_corso) REFERENCES corso_studi(codice)
 );
 
@@ -48,9 +48,9 @@ CREATE TABLE IF NOT EXISTS studenti (
 -- Inserire alcuni dati nella tabella degli studenti
 INSERT INTO studenti(matricola, nome, cognome, data_nascita, capo_g)
 VALUES
-    ('Manuel','Rossi',15-03-2004,03),
-    ('Daniele' 'Menicucci',09-02-2007,02),
-    ('Alessandro' 'Santoro',26-02-2007,01);
+    (01,'Manuel','Rossi',15-03-2004,03),
+    (02,'Daniele' 'Menicucci',09-02-2007,02),
+    (03,'Alessandro' 'Santoro',26-02-2007,01);
 
 SELECT * FROM studenti;
 
@@ -60,19 +60,19 @@ CREATE TABLE IF NOT EXISTS valutazioni (
     codice_val INT AUTO_INCREMENT PRIMARY KEY,
     voto INT,
     data_voto DATE,
-    FK_studenti FOREIGN KEY
-    FK_disc INT
-    FOREIGN KEY(FK_studenti) REFERENCES studenti(matricola)
+    FK_studenti INT,
+    FK_disc INT,
+    FOREIGN KEY(FK_studenti) REFERENCES studenti(matricola),
     FOREIGN KEY(FK_disc) REFERENCES disciplina(codice_disciplina)
 );
 
 
 -- Inserire alcuni dati nella tabella delle valutazioni
-INSERT INTO valutazioni(matricola, voto, data_voto)
+INSERT INTO valutazioni(FK_studenti, voto, data_voto)
 VALUES
-    ( 8 , 15-03-2004),
-    ( 9, 09-02-2007),
-    ( 7,26-02-2007);
+    ( 01 ,7, 2004-03-15),
+    ( 02,8, 2007-02-09),
+    ( 02,9, 2007-02-26);
 
 SELECT * FROM valutazioni;
 
@@ -81,10 +81,10 @@ SELECT s.cognome, v.voto
 FROM studenti s, valutazioni v
 WHERE s.matricola = v.FK_studenti;
 
-SELECT max(voto), min(voto), avg(voto);
+SELECT max(voto), min(voto), avg(voto)
 FROM valutazioni v, studenti s
 WHERE s.matricola = v.FK_studenti
-AND s.cognome = 'santoro'
+AND s.cognome = 'Santoro';
 
 SELECT count(*) FROM studenti
 
