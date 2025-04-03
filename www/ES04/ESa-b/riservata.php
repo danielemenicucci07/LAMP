@@ -4,7 +4,7 @@
         header("Location: login.php");
         die();
     }
-    echo "<h3>Benvenuto nella pagina riservata" . $_SESSION['username'] . "</h3>";
+    echo "<h3>Benvenuto nella pagina riservata " . $_SESSION['username'] . "</h3>";
 ?>
 
 <!DOCTYPE html>
