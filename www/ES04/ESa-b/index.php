@@ -11,8 +11,8 @@
 </head>
 <body>
     <h1>Benvenuto!</h1>
-    <a href="riservata.php">Accedi alla pagina riservata</a>
+    <a href="riservata.php">riservata</a>
     <br>
-    <a href="login.php">Accedi alla pagina di login</a>
+    <a href="login.php">Accedi</a>
 </body>
 </html>
