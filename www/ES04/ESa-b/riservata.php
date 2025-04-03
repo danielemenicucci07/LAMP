@@ -17,6 +17,6 @@
 <body>
     <a href="index.php">Home page</a>
     <br>
-    <a href="logout.php">Logout</a>
+    <a href="uscita.php">Logout</a>
 </body>
 </html>
