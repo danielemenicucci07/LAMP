@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (isset($_SESSION['username'])) {
+if (isset($_SESSION['username'])) { // se l'utente è gia loggato viene rimandato all'home page
     header('Location: index.php');
     die();
 }
