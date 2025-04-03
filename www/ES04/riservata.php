@@ -2,7 +2,7 @@
     session_start();
     if (!isset($_SESSION['utente'])){
         // L'utente non è autenticato, quindi redirect alla pagina di login
-        $url = 'accesso.php?error=<h2 style= color:red>Fare prima il login&from=';
+        $url = 'login.php?error=<h2 style= color:red>Fare prima il login&from=';
         $url .= basename($_SERVER['PHP_SELF']);
         header("Location: $url");
         exit;
