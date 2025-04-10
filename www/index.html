@@ -1,35 +1,138 @@
 <!-- http://204.216.213.176/inf3php/ES01/ -->
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Ambiente PHP - 5H</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      color: #2c3e50;
+    }
+    table {
+      margin: 30px auto;
+      border-collapse: collapse;
+      width: 80%;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #2980b9;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    a {
+      color: #2980b9;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
 <body>
-    <h1>Menicucci Ciao! Benvenuto nel mio ambiente di sviluppo di pagine PHP per gli studenti di 5H! By FB</h1>
-    <br /><br />
-    <h3>ES01 - PHP Hello World</h3>
-    <a href="ES01/hello_world.php">Hello PHP</a><br />
-    <a href="ES01/es01_table.php">Tabella pitagorica</a><br />
-    <a href="ES01/es01_day.php">Buongiorno,buonasera,buonanotte</a><br />
-    <a href="ES01/es01_tri.php">triangoli</a><br />
-    <br /><br /><br />
 
+  <h1>Menicucci Ciao! Benvenuto nel mio ambiente di sviluppo di pagine PHP per gli studenti di 5H! <br />By FB</h1>
 
+  <table>
+    <thead>
+      <tr>
+        <th>Esercizio</th>
+        <th>Descrizione</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="2"><strong>ES01 - PHP Hello World</strong></td>
+      </tr>
+      <tr>
+        <td><a href="ES01/hello_world.php">Hello PHP</a></td>
+        <td>Stampa "Hello World" con PHP</td>
+      </tr>
+      <tr>
+        <td><a href="ES01/es01_table.php">Tabella pitagorica</a></td>
+        <td>Genera la tabella pitagorica</td>
+      </tr>
+      <tr>
+        <td><a href="ES01/es01_day.php">Buongiorno, buonasera, buonanotte</a></td>
+        <td>Messaggio in base all’orario</td>
+      </tr>
+      <tr>
+        <td><a href="ES01/es01_tri.php">Triangoli</a></td>
+        <td>Calcolo o classificazione dei triangoli</td>
+      </tr>
 
+      <tr>
+        <td colspan="2"><strong>ES02 - Accesso a pagina riservata</strong></td>
+      </tr>
+      <tr>
+        <td><a href="es02a.php">Accesso a pagina riservata</a></td>
+        <td>Controllo base per l'accesso</td>
+      </tr>
+      <tr>
+        <td><a href="ES02/index_get_es02a.php">Accesso GET</a></td>
+        <td>Login tramite metodo GET</td>
+      </tr>
+      <tr>
+        <td><a href="ES02/index_post_es02a.php">Accesso POST</a></td>
+        <td>Login tramite metodo POST</td>
+      </tr>
+      <tr>
+        <td><a href="ES02/es02a2.php">Accesso</a></td>
+        <td>Altro esempio di login</td>
+      </tr>
+      <tr>
+        <td><a href="ES02/es02a_tab.php">Tabella</a></td>
+        <td>Tabella con utenti o dati</td>
+      </tr>
 
-  
-    <h3>ES02 - Accesso a pagina riservata</h3>
-    <a href="es02a.php">Accesso a pagina riservata</a><br />
-    <a href="ES02/index_get_es02a.php">accesso_get</a><br />
-    <a href="ES02/index_post_es02a.php">accesso_post</a><br />
-    <a href="ES02/es02a2.php">accesso</a><br />
-    <a href="ES02/es02a_tab.php">Tabella</a><br />
+      <tr>
+        <td colspan="2"><strong>ES03 - Validazione form</strong></td>
+      </tr>
+      <tr>
+        <td><a href="ES03/es03a.php">Validazione form A</a></td>
+        <td>Controllo dati form - parte A</td>
+      </tr>
+      <tr>
+        <td><a href="ES03/es03b.php">Validazione form B</a></td>
+        <td>Controllo dati form - parte B</td>
+      </tr>
 
-    <h3>ES03 - Validazione form</h3>
-    <a href="ES03/es03a.php">validazione form"</a><br />
-    <a href="ES03/es03b.php">validazione form"</a><br />
+      <tr>
+        <td colspan="2"><strong>ES04 - Gestione delle sessioni</strong></td>
+      </tr>
+      <tr>
+        <td><a href="ES04/ESa-b/index.php">Pagina di benvenuto</a></td>
+        <td>Benvenuto all’utente loggato</td>
+      </tr>
+      <tr>
+        <td><a href="ES04/ESa-b/login.php">Accesso</a></td>
+        <td>Login utente con sessione</td>
+      </tr>
+      <tr>
+        <td><a href="ES04/ESa-b/riservata.php">Pagina riservata</a></td>
+        <td>Accessibile solo dopo login</td>
+      </tr>
+      <tr>
+        <td><a href="ES04/ESa-b/uscita.php">Uscita</a></td>
+        <td>Logout dell’utente</td>
+      </tr>
+    </tbody>
+  </table>
 
-
-    <h3>ES04 - Gestione delle sessioni nelle applicazioni web</h3>
-    <a href="ES04/ESa-b/index.php">pagina di benvenuto</a><br />
-    <a href="ES04/ESa-b/login.php">accesso</a><br />
-    <a href="ES04/ESa-b/riservata.php">pagina riservata</a><br />
-    <a href="ES04/ESa-b/uscita.php">pagina di uscita</a><br />
+</body>
+</html>
 
    
    
