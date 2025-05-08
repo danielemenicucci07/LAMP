@@ -1,6 +1,6 @@
 <?php
-$utente_corretto = 'utente';
-$password_corretta = 'password';
+$utente_corretto = 'meni07';
+$password_corretta = 'forzainter';
 
 $username = $_POST['username'] ?? '';
 $password = $_POST['password'] ?? '';
