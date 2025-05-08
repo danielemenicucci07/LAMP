@@ -2,8 +2,8 @@
 $utente_corretto = 'meni07';
 $password_corretta = 'forzainter';
 
-$username = $_POST['username'] ?? '';
-$password = $_POST['password'] ?? '';
+$username = $_POST['meni07'] ?? '';
+$password = $_POST['forzainter'] ?? '';
 
 if ($username === $utente_corretto && $password === $password_corretta)
 {
