@@ -1,16 +1,16 @@
 CREATE DATABASE IF NOT EXISTS test;
 USE test;
 
-CREATE TABLE utenti (
+CREATE TABLE nomi (
     id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(50) NOT NULL UNIQUE,
     password VARCHAR(50) NOT NULL
 );
 
 -- Inserisci un utente di esempio
-INSERT INTO utenti (username, password) 
+INSERT INTO nomi (username, password) 
 VALUES 
-('marco', 'orso'),
+('filippo', 'orso'),
 ('piero', 'tavolo'),
 ('viola', 'sedia');
 

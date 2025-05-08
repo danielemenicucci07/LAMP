@@ -13,7 +13,7 @@ $username = $_POST['meni07'] ?? '';
 $password = $_POST['forzainter'] ?? '';
 
 // Query per trovare l'utente
-$sql = "SELECT * FROM utenti WHERE username = '$username'";
+$sql = "SELECT * FROM nomi WHERE username = '$username'";
 
 // Eseguiamo la query
 $result = mysql_query($sql, $conn);
