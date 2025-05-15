@@ -28,4 +28,8 @@ INSERT INTO utente VALUES
 (NULL, 'mrossi', '123'),
 (NULL, 'admin', 'admin');
 
+UPDATE utente SET Email = 'utente@example.com' WHERE Username = 'utente';
+UPDATE utente SET Email = 'mrossi@example.com' WHERE Username = 'mrossi';
+UPDATE utente SET Email = 'admin@example.com' WHERE Username = 'admin';
+
 SELECT * FROM utente;
