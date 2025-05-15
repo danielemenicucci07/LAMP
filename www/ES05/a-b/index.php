@@ -16,7 +16,6 @@ if (!$conn) {
 }
 $html_out = "Connessione al database riuscita.";
 // ... successivamente eseguire le query qui ...
-
 // Chiusura della connessione
 mysqli_close($conn);
 } catch (Exception $e) {
