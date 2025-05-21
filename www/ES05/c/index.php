@@ -20,7 +20,7 @@ if ($utente === 'Ospite') {
   <title>Login</title>
 </head>
 <body>
-  <h2>ES05 - Login con PHP e MySQL</h2>
+  <h2>Home Page dell'ES05 - Login con PHP e MySQL</h2>
   <p>Benvenuto <?= $utente ?> questa è la home page del sito.<br />
 
   <!-- Link -->
